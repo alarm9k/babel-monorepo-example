@@ -12,5 +12,8 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "webpack": "^4.29.6"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
   }
 }
