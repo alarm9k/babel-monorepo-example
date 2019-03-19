@@ -1,5 +1,8 @@
-module.exports = {
-    babelrcRoots: ['packages/*'],
-    presets: ['@babel/preset-env'],
-    plugins: ['@babel/plugin-proposal-object-rest-spread']
+module.exports = api => {
+    api.cache(true);
+    return {
+        babelrcRoots: ['packages/*'],
+        presets: ['@babel/preset-env'],
+        plugins: []
+    };
 };

@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+    mode: 'development',
     entry: {
         polyfills: '@babel/polyfill',
         main: './src/index.js'
@@ -14,10 +15,14 @@ module.exports = {
         rules: [
             {
                 test: /\.(js|jsx)$/,
+                include: [
+                    path.resolve(__dirname, 'src'),
+                    path.resolve(__dirname, '../two/src')
+                ],
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        "rootMode": "upward"
+                        rootMode: "upward"
                     }
                 }
 
